@@ -16,7 +16,7 @@ def accept_connection(server_socket): # Разделяем и формируем
     print('Connection from', addr)
     to_monitor.append(client_socket)
 
-
+# здесь мы получили малую связность между контролем подключения и ответами на запросы.
 
 def send_of_client(client_socket): # Разделяем и формируем функцию на отправку сообщения 
     request = client_socket.recv(4096) 
@@ -30,7 +30,6 @@ def send_of_client(client_socket): # Разделяем и формируем ф
 
 def event_loop(): # формируем менеджер задач
     while True:
-        print(to_monitor) 
         ready_to_read, _, _ = select(to_monitor, [], []) # здесь происходит контроль сокетов, добовляем список в мониторинг
         
         for sock in ready_to_read:
