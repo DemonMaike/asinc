@@ -30,7 +30,7 @@ def avarege():
     
     while True:
         try:
-            x = yield avarege # не забываем что yield работает как return, то есть он возвращает значения!
+            x = yield # не забываем что yield работает как return, то есть он возвращает значения!
         
         except StopIteration:
             print('Done')
