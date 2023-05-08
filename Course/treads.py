@@ -1,5 +1,5 @@
 # This code preview the treading in python
-# tread in this code is real tread in OS and it can look if to use command 'ps -T'
+# tread in this code is real tread in OS and it can look if to use command 'ps aux | grep python' and 'ps -T -p <PIDp>'
 
 from threading import Thread
 from time import sleep, time
