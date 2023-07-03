@@ -49,7 +49,6 @@ def proc_2():
     
     
 if __name__ == '__main__':
-    proc_info()
     
     p1 = Process(target=proc_1)
     p1.start()
@@ -57,7 +56,7 @@ if __name__ == '__main__':
     p2.start()
     
     p1.join()
-    p1.join()
+    p2.join()
     
     proc_info()
 
